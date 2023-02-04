@@ -1,0 +1,38 @@
+{
+  "name": "plan",
+  "version": "3.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd schedule-data-service && node index",
+    "dev": "cd schedule-data-service && nodemon index",
+    "test-ui": "cypress open --browser chrome",
+    "test-cl": "cypress run --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^5.2.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "nodemailer": "^6.4.17",
+    "pdfkit": "^0.11.0"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "12.2",
+    "@cypress/webpack-preprocessor": "5.12",
+    "cypress": "10.7",
+    "nodemon": "^2.0.20"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true
+    },
+    "stepDefinitions": [
+      "/specs/step_definitions/*.js"
+    ]
+  }
+}
